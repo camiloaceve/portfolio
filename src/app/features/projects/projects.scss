@@ -7,6 +7,14 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
+        
+        @media (max-width: 768px) {
+            padding: 0 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            padding: 0 0.75rem;
+        }
     }
 
     .section-title {
@@ -16,6 +24,16 @@
         color: #1E3A8A;
         font-weight: 700;
         position: relative;
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 480px) {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+        }
 
         &::after {
             content: '';
@@ -27,7 +45,22 @@
             height: 4px;
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             border-radius: 2px;
+            
+            @media (max-width: 480px) {
+                width: 60px;
+                height: 3px;
+            }
         }
+    }
+    
+    @media (max-width: 768px) {
+        padding: 4rem 0;
+        margin-top: 70px;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 3rem 0;
+        margin-top: 60px;
     }
 }
 

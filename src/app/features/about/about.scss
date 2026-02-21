@@ -2,12 +2,30 @@
     padding: 6rem 0;
     background: #f8f9fa;
     margin-top: 80px;
+    
+    @media (max-width: 768px) {
+        padding: 4rem 0;
+        margin-top: 70px;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 3rem 0;
+        margin-top: 60px;
+    }
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    
+    @media (max-width: 768px) {
+        padding: 0 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0 0.75rem;
+    }
 }
 
 .section-title {
@@ -17,6 +35,16 @@
     color: #1E3A8A;
     font-weight: 700;
     position: relative;
+    
+    @media (max-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
     
     &::after {
         content: '';
@@ -28,6 +56,11 @@
         height: 4px;
         background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
         border-radius: 2px;
+        
+        @media (max-width: 480px) {
+            width: 60px;
+            height: 3px;
+        }
     }
 }
 
@@ -36,6 +69,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 .about-left {
@@ -43,12 +81,24 @@
     padding: 3rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 1.5rem;
+    }
 }
 
 .about-right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
+    @media (max-width: 768px) {
+        gap: 1.5rem;
+    }
 }
 
 h3 {
@@ -56,6 +106,16 @@ h3 {
     color: #1E3A8A;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 p {
@@ -63,6 +123,17 @@ p {
     line-height: 1.8;
     color: #4a5568;
     margin-bottom: 1.5rem;
+    
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+    }
 }
 
 .competencies {
@@ -70,6 +141,14 @@ p {
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 1.5rem;
+    }
 }
 
 .competencies h4 {
@@ -77,6 +156,16 @@ p {
     color: #1E3A8A;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 .competencies ul {
@@ -91,6 +180,12 @@ p {
     position: relative;
     padding-left: 2rem;
     border-bottom: 1px solid #e2e8f0;
+    
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+        padding: 0.6rem 0;
+        padding-left: 1.5rem;
+    }
 }
 
 .competencies li:last-child {
@@ -104,12 +199,20 @@ p {
     position: absolute;
     left: 0;
     top: 0.8rem;
+    
+    @media (max-width: 480px) {
+        top: 0.6rem;
+    }
 }
 
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    
+    @media (max-width: 480px) {
+        gap: 1rem;
+    }
 }
 
 .stat-item {
@@ -119,16 +222,36 @@ p {
     text-align: center;
     color: #1E3A8A;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    
+    @media (max-width: 768px) {
+        padding: 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 1rem;
+    }
 }
 
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 2rem;
+    }
 }
 
 .stat-label {
     font-size: 1rem;
     opacity: 0.9;
     font-weight: 500;
+    
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
 }
