@@ -1,0 +1,111 @@
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Work Together</h3>
+                <p class="contact-description">
+                    I'm always interested in discussing new opportunities, innovative projects, 
+                    and challenging backend architectures. Whether you need a scalable API, cloud 
+                    infrastructure, or full-stack development, I'd love to hear from you.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:Alex.morgan.dev@gmail.com">Alex.morgan.dev@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <div class="contact-text">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/alexmorgan-dev" target="_blank">
+                                linkedin.com/in/alexmorgan-dev
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">🐙</span>
+                        <div class="contact-text">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/alexmorgan-dev" target="_blank">
+                                github.com/alexmorgan-dev
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            [(ngModel)]="formData.name"
+                            required
+                            #name="ngModel"
+                            [class.error]="name.invalid && name.touched"
+                            placeholder="Your Name"
+                        >
+                        <div class="error-message" *ngIf="name.invalid && name.touched">
+                            Name is required
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            [(ngModel)]="formData.email"
+                            required
+                            email
+                            #email="ngModel"
+                            [class.error]="email.invalid && email.touched"
+                            placeholder="Your Email"
+                        >
+                        <div class="error-message" *ngIf="email.invalid && email.touched">
+                            Valid email is required
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            [(ngModel)]="formData.message"
+                            required
+                            #message="ngModel"
+                            [class.error]="message.invalid && message.touched"
+                            placeholder="Your Message"
+                        ></textarea>
+                        <div class="error-message" *ngIf="message.invalid && message.touched">
+                            Message is required
+                        </div>
+                    </div>
+                    
+                    <button 
+                        type="submit" 
+                        class="submit-btn"
+                        [disabled]="contactForm.invalid || isSubmitting"
+                    >
+                        {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+                    </button>
+                    
+                    <div class="success-message" *ngIf="isSuccess">
+                        Message sent successfully! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
