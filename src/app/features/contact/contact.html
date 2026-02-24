@@ -85,6 +85,10 @@
                     <div class="success-message" *ngIf="isSuccess">
                         Message sent successfully! I'll get back to you soon.
                     </div>
+
+                    <div class="error-message" *ngIf="isError">
+                        Failed to send message. Please try again later.
+                    </div>
                 </form>
             </div>
         </div>
